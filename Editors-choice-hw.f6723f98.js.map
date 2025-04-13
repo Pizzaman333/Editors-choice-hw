@@ -1,0 +1,1 @@
+{"mappings":"AEAA,QAAQ,GAAG,CAAC","sources":["<anon>","src/main.js","src/js/get-data.js"],"sourcesContent":["console.log(\"get data\");\n\n\n\n\n//# sourceMappingURL=Editors-choice-hw.f6723f98.js.map\n","import \"./js/get-data\";\r\n","console.log(\"get data\");\r\n"],"names":["console","log"],"version":3,"file":"Editors-choice-hw.f6723f98.js.map"}

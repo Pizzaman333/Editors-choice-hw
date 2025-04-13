@@ -1,1 +1,0 @@
-import "./js/get-data";
