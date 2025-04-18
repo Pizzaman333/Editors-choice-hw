@@ -1,1 +1,1 @@
-import "./js/get-data";
+import "./js/app";
