@@ -1,0 +1,149 @@
+body {
+  color: #333;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Segoe UI, sans-serif;
+}
+
+.container {
+  backdrop-filter: blur(12px);
+  background: #fff9;
+  border-radius: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 8px 30px #00000026;
+}
+
+h1 {
+  text-align: center;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  -webkit-background-clip: text;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+}
+
+.gallery {
+  column-count: 4;
+  column-gap: 20px;
+}
+
+@media (width <= 768px) {
+  .gallery {
+    column-count: 2;
+  }
+}
+
+@media (width <= 480px) {
+  .gallery {
+    column-count: 1;
+  }
+}
+
+.image-container {
+  break-inside: avoid;
+  opacity: 0;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  animation: .6s forwards fadeInUp;
+  position: relative;
+  overflow: hidden;
+  transform: translateY(30px);
+  box-shadow: 0 10px 25px #00000026;
+}
+
+.image-container:nth-child(2n) {
+  animation-delay: .1s;
+}
+
+.image-container:nth-child(3n) {
+  animation-delay: .2s;
+}
+
+.image-container img {
+  border-radius: 15px;
+  width: 100%;
+  transition: transform .4s;
+  display: block;
+}
+
+.image-container:hover img {
+  transform: scale(1.07)rotate(1deg);
+}
+
+.image-container:before {
+  content: "";
+  opacity: 0;
+  background: linear-gradient(to top, #0006, #0000);
+  transition: opacity .3s;
+  position: absolute;
+  inset: 0;
+}
+
+.image-container:hover:before {
+  opacity: 1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.image-container {
+  opacity: 0;
+  animation: .6s forwards fadeInUp;
+  transform: translateY(30px);
+}
+
+.load-more {
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  border: none;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 30px auto 0;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: transform .3s, box-shadow .3s;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 15px #0003;
+}
+
+.load-more:after {
+  content: "";
+  background: #ffffff4d;
+  width: 50%;
+  height: 100%;
+  transition: left .5s;
+  position: absolute;
+  top: 0;
+  left: -75%;
+  transform: skewX(-25deg);
+}
+
+.load-more:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px #00000040;
+}
+
+.load-more:hover:after {
+  left: 130%;
+}
+/*# sourceMappingURL=Editors-choice-hw.4d663569.css.map */
